@@ -10,7 +10,9 @@ spring:
 ---
 
 spring:
-  profiles: dev
+  config:
+    activate:
+      on-profile: dev
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
@@ -26,7 +28,9 @@ welcome:
 ---
 
 spring:
-  profiles: qa
+  config:
+    activate:
+      on-profile: qa
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
@@ -42,7 +46,9 @@ welcome:
 ---
 
 spring:
-  profiles: pro
+  config:
+    activate:
+      on-profile: pro
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
