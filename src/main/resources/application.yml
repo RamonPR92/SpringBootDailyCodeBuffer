@@ -60,3 +60,13 @@ spring:
     show-sql: 'true'
 welcome:
   message: Welcome to my site...
+
+#This configuration enables to show endpoints that give information about the app
+management:
+  endpoints:
+    web:
+      exposure:
+        #this config exposes all endpoints
+        include: "*"
+        #this excludes the endpoints  /actuator/env and /actuator/beans
+        exclude: "env,beans"
